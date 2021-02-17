@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".Log">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/log_id"
+        android:text="Log"
+        android:gravity="center"
+        android:inputType="text"
+        android:lines="1"
+        android:maxLines="1"
+        android:padding="3dp"
+        android:textSize="18sp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/longitude"
+        app:layout_constraintHorizontal_weight="0.4"
+        />
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/longitude"
+        android:text="Longitude"
+        android:gravity="center"
+        android:inputType="text"
+        android:lines="1"
+        android:maxLines="1"
+        android:padding="3dp"
+        android:textSize="18sp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/bg"
+        app:layout_constraintLeft_toRightOf="@id/log_id"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/Latitude"
+        app:layout_constraintHorizontal_weight="1"
+        />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/Latitude"
+        android:text="Latitude"
+        android:gravity="center"
+        android:inputType="text"
+        android:lines="1"
+        android:maxLines="1"
+        android:padding="3dp"
+        android:textSize="18sp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/bg"
+        app:layout_constraintLeft_toRightOf="@id/longitude"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/Url"
+        app:layout_constraintHorizontal_weight="1"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/Url"
+        android:text="View"
+        android:gravity="center"
+        android:inputType="text"
+        android:lines="1"
+        android:maxLines="1"
+        android:padding="3dp"
+        android:textSize="18sp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/bg"
+        app:layout_constraintLeft_toRightOf="@id/Latitude"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="1dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/longitude"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
